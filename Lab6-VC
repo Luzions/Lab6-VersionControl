@@ -5,7 +5,13 @@ def encode(password):
     return new_encode
 
 
-#add decode()
+def decode(password):
+    decoded_password = ""
+    for number in password:
+        number = int(number) - 3
+        if number < 0: number += 10
+        decoded_password += str(number)
+    return decoded_password
 
 
 print("Menu")
@@ -20,10 +26,12 @@ while True:
     if option == 1:
         password = int(input(f"Please enter your password to encode: "))
         new_encode = encode(password)
-        print("Your password has been encoded and stored!")
+        print(f"Your encoded password is {new_encode}!")
 
     if option == 2:
-        print(f"The encoded password is {new_encode} and the original password is {password}.")
+        password = input(f"Please enter the password to decode: ")
+        decoded_password = decode(password)
+        print(f"The original password was {decoded_password}.")
 
 
     if option == 3:
