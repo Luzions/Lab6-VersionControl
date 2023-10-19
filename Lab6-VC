@@ -13,26 +13,26 @@ def decode(password):
         decoded_password += str(number)
     return decoded_password
 
+if __name__ == '__main__'
+    print("Menu")
+    print("-------------")
+    print("1. Encode")
+    print("2. Decode")
+    print("3. Quit")
 
-print("Menu")
-print("-------------")
-print("1. Encode")
-print("2. Decode")
-print("3. Quit")
+    while True:
+        option = int(input("\nPlease enter an option: "))
 
-while True:
-    option = int(input("\nPlease enter an option: "))
+        if option == 1:
+            password = int(input(f"Please enter your password to encode: "))
+            new_encode = encode(password)
+            print(f"Your encoded password is {new_encode}!")
 
-    if option == 1:
-        password = int(input(f"Please enter your password to encode: "))
-        new_encode = encode(password)
-        print(f"Your encoded password is {new_encode}!")
-
-    if option == 2:
-        password = input(f"Please enter the password to decode: ")
-        decoded_password = decode(password)
-        print(f"The original password was {decoded_password}.")
+        if option == 2:
+            password = input(f"Please enter the password to decode: ")
+            decoded_password = decode(password)
+            print(f"The original password was {decoded_password}.")
 
 
-    if option == 3:
-        break
+        if option == 3:
+            break
