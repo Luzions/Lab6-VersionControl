@@ -1,3 +1,4 @@
+#Michael Sanchez 
 def encode(password):
     new_encode = list(str(password))
     new_encode = [int(i)+3 or int('0') == 3 for i in new_encode]         # compressed list incrementing each item. Added accountability for '0'
