@@ -13,7 +13,7 @@ def decode(password):
         decoded_password += str(number)
     return decoded_password
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     print("Menu")
     print("-------------")
     print("1. Encode")
